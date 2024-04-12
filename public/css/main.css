@@ -1,0 +1,299 @@
+
+/********************
+ Global
+ *******************/
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header .brand {
+    float: left;
+}
+
+header .brand h1 {
+    margin: 0;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/********************
+ Form
+ *******************/
+form {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+form .form-group {
+    margin-bottom: 10px;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="file"],
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+form .form-group input[type="submit"] {
+    background-color: #5D9CEC;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .form-group input[type="submit"]:hover {
+    background-color: #4A89DC;
+}
+
+textarea {
+    height: 100px;
+}
+
+
+
+/********************
+ ADMIN
+ *******************/
+.admin-list {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.admin-item button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.admin-item button:hover {
+    background-color: #0056b3;
+}
+
+/********************
+ INDEX
+ *******************/
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.post-card {
+    width: calc(33.333% - 40px);
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cat {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+h3, p {
+    margin: 10px 0;
+}
+
+.post-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+.post-card a:hover {
+    background-color: #e2e2e2;
+}
+
+/******************
+Nav
+******************/
+
+aside {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    border-bottom: 1px solid #444;
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+aside nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * *,
+MODAL
+* * * * * * * * * * * * * * * * * * * * * * *  */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    position: relative;
+    top: 50px;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(0);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

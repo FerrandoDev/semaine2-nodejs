@@ -1,0 +1,12 @@
+Création d'un blog
+
+une page d'acceuil avec les 3 derniers post
+Page Admin des articles
+les articles doivent avoir :
+-titre
+-content
+-picture
+-alt
+-catégorie_id ( créer une table relationnelle)
+-date de création
+-date de modification

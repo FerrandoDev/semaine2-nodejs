@@ -1,0 +1,26 @@
+<header>
+    <div class="container">
+        <h1>Welcome to the Blog</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="posts-container">
+        <% posts.forEach(function(post) { %>
+            <div class="post-card">
+                <p class="cat" style="background-color: <%= post.categorie_color %>"><%= post.categorie_titre %></p>
+                <h3><%= post.post_titre %></h3>
+                <img src="<%= post.picture %>" alt="Image">
+                <p>
+                    <% if (post.content.length > 100) { %>
+                        <%= post.content.substring(0, 100) + '...' %>
+                    <% } else { %>
+                        <%= post.content %>
+                    <% } %>
+                </p>
+                <a href="/view/<%= post.id %>">Read More</a>
+            </div>
+        <% }); %>
+    </div>
+</div>
+

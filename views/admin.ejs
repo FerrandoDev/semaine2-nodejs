@@ -1,0 +1,29 @@
+
+
+
+
+<header>
+        <div class="container">
+                <h1>Admin Dashboard</h1>
+        </div>
+</header>
+
+
+<div class="container">
+        <button class="btn btn-info" onclick="location.href='/add'">Add post</button>
+        <button type="button" class="btn btn-info addCategorie">Add Category</button>
+        <% posts.forEach(function(post) { %>
+                <div class="admin-item">
+                        <span><%= post.titre %></span>
+                        <div>
+                                <button onclick="location.href='/view/<%= post.id %>'">View</button>
+                                <button onclick="location.href='/edit/<%= post.id %>'">Edit</button>
+                                <button onclick="location.href='/delete/<%= post.id %>'">Delete</button>
+                        </div>
+                </div>
+        <% }); %>
+</div>
+
+<%- include('partials/addCatModal') %>
+<script src="/js/modal.js" ></script>
+

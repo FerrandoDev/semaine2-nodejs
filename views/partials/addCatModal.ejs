@@ -1,0 +1,26 @@
+<!-- Modal structure -->
+<div class="modal" id="addCategorie">
+    <div class="modal-overlay"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails de l'utilisateur</h5>
+                <button class="close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="addCategorie">
+                <form action="/add/cat" method="post">
+                    <div class="form-group">
+                        <label for="titre">Title:</label>
+                        <input type="text" name="titre" id="titre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color:</label>
+                        <input type="text" name="color" id="color" required>
+                    </div>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
